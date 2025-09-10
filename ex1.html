@@ -7,7 +7,7 @@
     
     <h2>Form Validation</h2>
 
-    <form name="form" action="." onsubmit="validateForm()" autocomplete="on" >
+    <form name="form" action="#" onsubmit="validateForm()" autocomplete="on" >
             ID: <input type="text" name="id" ><br>
             Age: <input type="number" name="age" ><br>
             Email: <input type="text" name="email" ><br>
@@ -29,7 +29,7 @@
                 if (email.indexOf("@") == -1) {
                     msg += "email has no @ \n";
                 }
-                if(length(id) > 10){
+                if(id.length > 10){
                     msg += "id must not be more than 10 \n";
                 }
                 if(age < 10 || age > 40){
@@ -39,7 +39,7 @@
                     msg += "password is empty \n";
                 }
                 
-                if(msg === ""){
+                if(msg != ""){
                     alert(msg);
                 }
                 
